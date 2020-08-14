@@ -1,5 +1,5 @@
 # Linux_scripts
-Use at your own risk
+# Use at your own risk
 Set script on scheduler/crontab every 12 hours or ... 
 # -RESYNC CLOSE ACCOUNT AD WITH ZIMBRAM MAIL ACCOUNT
 # -RESYNC CREATE ACCOUNT AD WITH ZIMBRAM MAIL ACCOUNT
