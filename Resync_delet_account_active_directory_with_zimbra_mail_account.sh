@@ -1,5 +1,6 @@
 #ADJUSMETN YOUR DOMAIN & PATH
-LDAPSEARCH=/opt/zimbra/common/bin/ldapsearch
+
+LDAPSEARCH=/opt/zimbra/bin/ldapsearch
 ZMPROV=/opt/zimbra/bin/zmprov
 DOMAIN_NAME="example.co.id"
 TIMESTAMP=`date +%N`
@@ -59,17 +60,4 @@ diff -u $ZCS_TMP $ADS_TMP | grep "$DOMAIN_NAME" > $DIF_TMP
 rm -f $ADS_TMP $ZCS_TMP
 
 # Delete old users
-echo -n "Old users: "
-cat $DIF_TMP | grep ^- | wc -l
-for i in $(cat $DIF_TMP | grep ^- | sed s/^-//g);
-do
-  echo -n " - Closed $i ";
-  $ZMPROV ModifyAccount $i zimbraAccountStatus closed > /dev/null;
-  RES=$?
-  if [ "$RES" == "0" ]; then echo "[Ok]"; else echo "[Err]"; fi
-done
-
-# Clean up diff list
-rm -f $DIF_TMP
-
-fi
+echo -n "Old us
