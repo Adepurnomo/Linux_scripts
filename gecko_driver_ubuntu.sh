@@ -1,4 +1,5 @@
-cd 
+#!/bin/bash
+cd
 sudo apt install firefox python3-pip xvfb x11-utils --yes
 sudo -H pip3 install bpython selenium
 export DISPLAY=:2
